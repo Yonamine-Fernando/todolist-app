@@ -37,23 +37,6 @@ Começando (macOS / Linux / Windows)
 4. Testar build localmente
    npm run preview
 
-Dicas e problemas comuns
-- Fonts em public:
-  - Arquivos dentro de public são servidos na raiz. No CSS use: src: url("/fonts/JosefinSans-VariableFont_wght.ttf") format("truetype");
-  - Preferível converter .ttf para .woff2 para melhoria de performance (woff2_compress no macOS via brew).
-- Import de assets:
-  - Não importe arquivos diretamente de /public (ex: import Icon from "../public/...") — use URLs públicas: src="/images/icon-cross.svg" ou mova os assets para src/assets e importe normalmente.
-- Fast Refresh warning:
-  - "Fast Refresh só funciona quando um arquivo exporta apenas componentes..." → mova contexts/Providers para arquivos separados e exporte um ThemeProvider que passa o value.
-- LocalStorage:
-  - A persistência está implementada em src/hooks/useTodo.ts:
-    - Leitura inicial (safe JSON parse)
-    - useEffect para gravar sempre que todoList muda
-- Ícone de remover com hover (Tailwind):
-  - Marque o item como container `group`.
-  - Botão: padrão mobile visível; em desktop escondido e exibido via `sm:group-hover:opacity-100 sm:group-hover:pointer-events-auto`.
-  - Exemplo de classes: `absolute right-4 top-1/2 -translate-y-1/2 opacity-100 pointer-events-auto sm:opacity-0 sm:pointer-events-none sm:group-hover:opacity-100 sm:group-hover:pointer-events-auto`
-  - Ajuste padding (ex: `pr-10`) no parágrafo para não sobrepor o botão.
 
 Estrutura do projeto
 - public/
