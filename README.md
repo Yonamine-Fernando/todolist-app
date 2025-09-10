@@ -68,23 +68,6 @@ Estrutura do projeto
     - globals.css (Tailwind + @font-face)
   - App.tsx, main/index.tsx
 
-Boas práticas
-- Converter fontes para woff2 em produção.
-- Tratar possível falha de localStorage (ex.: modo privado) com try/catch (já implementado no hook).
-- Usar aria-label em botões de ação (ex.: remover item) para acessibilidade.
-
-Exemplos de comandos úteis (macOS)
-- Hard reload no Chrome/DevTools: Cmd+Shift+R
-- Converter ttf -> woff2 (instalar woff2 via Homebrew):
-  brew install woff2
-  woff2_compress public/fonts/JosefinSans-VariableFont_wght.ttf
-
-Contribuição
-- Abra issues para bugs/feature requests.
-- Fork → branch → PR com descrição e screenshots.
-
-Licença
-- Adicione LICENSE (ex: MIT) conforme necessidade.
 
 EN — English section
 # TodoList App (React + TypeScript + Vite)
@@ -103,12 +86,6 @@ How to run
 - Preview build:
   npm run preview
 
-Notes / Troubleshooting
-- Public assets: use absolute URLs like src="/images/icon-cross.svg" or move assets into src to import.
-- Fonts: @font-face must point to /fonts/... in public. Prefer woff2 for production.
-- Fast Refresh: keep contexts/providers in separate files and export a ThemeProvider.
-- Delete icon on hover: make parent a Tailwind `group` and use responsive group-hover classes (hidden on desktop by default, visible on mobile).
-
 Project layout
 - public/ (fonts, images)
 - src/ (components, hooks/useTodo.ts, styles/globals.css)
@@ -120,4 +97,3 @@ Contribute & License
 - Open issues, fork, PR. Add a license file (e.g., MIT).
 
 ---
-Se quiser, atualizo o README no repositório ou gero um CHANGELOG básico com os comandos já usados no
